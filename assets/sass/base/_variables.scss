@@ -1,0 +1,58 @@
+// Global settings
+$global-layout-gutter: 40px;
+$global-font-size: 14px;
+$global-width: 1200px;
+
+// Custom media query breakpoints.
+$breakpoint-mobile: 480px;
+
+// Standart set media queries
+$breakpoint-small: 	640px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 	1140px;
+
+// Some elements must have max-width for mobile view.
+$mobile-layout-width-limit: 80vw;
+
+// Layout
+$layout-header-height: 90px;
+
+// Colors:
+$color-green: #9fd54a;
+$color-blue: #1b0594;
+$color-navy-blue: #140a4e;
+$color-pure-green: #64c040;
+$color-purple: #7f6fb6;
+$color-orange: #ff4e00;
+$color-yellow: #ffd200;
+$color-gray: #313131;
+$color-pink: #e986b1;
+$color-black: #171717;
+$color-silver: #838383;
+$color-silver-light: #d4d4d4;
+$color-platinum: #f7f7f7;
+
+// Use these in the scss files.
+$color-primary: $color-navy-blue;
+$color-accent: $color-green;
+$color-shopping-1: $color-purple;
+$color-shopping-2: $color-pink;
+$color-text-body: $color-gray;
+$color-text-muted: $color-silver;
+$color-divider: $color-platinum;
+$color-link-hover: $color-blue;
+
+// Fonts
+$font-serif: Georgia, serif;
+$font-sans: 'Questrial', sans-serif;
+$font-heading: $font-sans;
+
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 22px;
+
+// Inputs
+$input-global-padding: 12px 38px;
+$input-global-radius: 5px;

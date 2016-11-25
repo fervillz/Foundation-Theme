@@ -1,0 +1,9 @@
+=== Fortnum theme ===
+
+Fortnum theme by Dripcreative
+
+= 10/11/2016 - Version 1.2.0 =
+ * First staging version
+
+= 10/4/2016 - Version 1.0.0 =
+ * Initial version for the starter theme

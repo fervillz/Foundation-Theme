@@ -1,0 +1,316 @@
+// Stylings for anything related to the .entry component
+.entry {
+	margin-bottom: 35px;
+	padding-bottom: 35px;
+
+	&:last-of-type,
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	&-date {
+		font-size: 14px;
+		color: #304fe9;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-right: 10px;
+		font-family: 'Montserrat', sans-serif;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	time.updated {
+		display: none;
+	}
+
+	&-content {
+		line-height: 27px;
+	}
+
+	&-title {
+		color: $color-text-body;
+		margin-bottom: 20px;
+		line-height: 36px;
+
+		a {
+			color: $color-text-body;
+			transition: 0.5s;
+		}
+
+		a:hover {
+			color: $color-primary;
+			transition: 0s;
+		}
+
+		.category-how-tos & {
+			&:before {
+				content: '';
+				background: url(../images/how-tos.svg);
+				height: 40px;
+				width: 24px;
+				display: inline-table;
+				margin-right: 10px;
+				background-repeat: no-repeat;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&-excerpt {
+		font-size: $font-size-l;
+		color: $color-text-muted;
+	}
+
+	&-footer,
+	&-meta {
+		display: flex;
+		color: $color-text-muted;
+		font-size: $font-size-s;
+		margin-top: 15px;
+	}
+
+	&-footer {		
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Montserrat', sans-serif;
+		margin-top: 35px;
+
+		.archive &,
+		.search & {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #f9f9f9;
+			padding: 15px 20px;
+
+			@media ( max-width: 320px ) {
+				.share-label {
+					display: none;
+				}
+			}
+
+			&:hover {
+				transition: 150ms;
+				background: #f0f0f0;
+			}
+		}
+
+		a {
+			color: #3f3f3f;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+		.read-more {
+			
+		}
+
+		.share-article {
+			color: #333333;
+		}
+
+		.share-item {
+			margin: 0 10px;
+		}
+
+		.entry-categories {
+			margin: 0;
+
+			&:before {
+				display: none;
+			}
+
+			@media (min-width: 641px) {
+				display: inline-block;
+			}
+		}
+	}
+
+	// Small update on the visuals for the meta. When the 
+	// content is too much it gets into columns that doesn't
+	// look very pretty.
+	&-meta {
+		display: block;
+		padding-bottom: 20px;
+
+		.entry-author {
+			display: inline-block;
+		}
+	}
+
+	.single &-meta,
+	.page &-meta {		
+
+		.entry-categories {
+			margin-left: auto;
+			a { font-style: normal; }
+			&:before { display: none; }
+		}
+	}
+
+	&-author {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.archive & {
+			flex-basis: 50%;
+		}
+
+		.author-info {}
+
+		.author-name {
+			font-weight: bold;
+		}
+
+		.author-name:hover {
+			color: $color-text-body;
+		}
+	}
+
+	&-thumbnail img {
+		border: 1px solid #ddd;
+	}
+
+	&-categories {
+		margin-left: 40px;
+		position: relative;
+		font-style: italic;
+
+		&:before {
+			height: 30px;
+			width: 1px;
+			content: ''; display: inline-block;
+			background-color: #ddd;
+			position: absolute;
+			left: -20px;
+			transform: skew(-15deg);
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		a {
+			color: $color-text-muted;
+		}
+
+		a:hover {
+			color: $color-primary;
+		}
+
+		@media (max-width: $breakpoint-small) {
+			display: none;
+		}
+	}
+
+	.read-more {
+		font-weight: bold;
+
+		&:hover {
+			color: $color-text-body;
+		}
+	}
+
+	&-content {
+		// font-size: $font-size-l;
+
+		h1,h2,h3,h4,h5,h6 {
+			font-weight: bold;
+
+			small {
+				color: $color-text-muted;
+			}
+		}
+
+		h1 {
+			font-size: 28px;
+		}
+
+		h2 {
+			font-size: 24px;
+		}
+		
+		h4 {
+			font-size: $font-size-s;
+		}
+
+		h5 {
+			font-size: $font-size-s;
+			text-transform: uppercase;
+		}
+
+		h6 {
+			font-size: $font-size-xs;
+			text-transform: uppercase;
+		}
+
+		.line-separator {
+			height: 1px;
+			margin: 20px 0;
+			background: $color-divider;
+		}
+
+		ol {
+			list-style-type: decimal;
+			margin: 30px 0 30px 20px;
+		}
+
+		ul {
+			list-style-type: disc;
+			margin: 30px 0 30px 20px;
+		}
+	}
+
+	.edit-link {
+		margin-left: 10px;
+	}
+
+	.post-edit-link {
+		margin-left: 15px;
+		font-weight: bold;
+		background-color: #e6e6e6;
+		color: white;
+		padding: 3px 8px;
+		display: inline-block;
+		margin-top: -3px;
+		border-radius: 5px;
+		&:hover {
+			background: $color-primary;
+		}
+	}
+
+	@media (max-width: $breakpoint-small) {
+		padding: 0;
+		box-shadow: none;
+	}
+
+	figure {
+		margin: 0 31px 0 0;
+		text-align: left;
+
+		img {
+			padding: 0;
+		}
+
+		figcaption {
+			font-size: 12px;
+			line-height: 17px;
+			font-weight: bold;
+			text-align: left; 
+		}
+	}
+
+	.clear-none {
+		clear: none;
+	}
+}
+
+.post-navigation {
+	margin-bottom: 20px;
+}

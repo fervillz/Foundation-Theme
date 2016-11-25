@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */ }
+  .star-cb-group * {
+    font-size: 1rem; }
+  .star-cb-group > input {
+    display: none; }
+    .star-cb-group > input + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer; }
+      .star-cb-group > input + label:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: "";
+        color: #888;
+        font-family: dashicons; }
+    .star-cb-group > input:checked ~ label:before,
+    .star-cb-group > input + label:hover ~ label:before,
+    .star-cb-group > input + label:hover:before {
+      font-family: dashicons;
+      content: "";
+      color: #ffc000; }
+  .star-cb-group > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em; }
+  .star-cb-group > .star-cb-clear + label:before {
+    width: .5em; }
+  .star-cb-group:hover > input + label:before {
+    content: "";
+    color: #888;
+    text-shadow: none; }
+  .star-cb-group:hover > input + label:hover ~ label:before,
+  .star-cb-group:hover > input + label:hover:before {
+    content: "";
+    color: #ffc000; }
+
+.toplevel_page_fortnum-settings table {
+  position: relative;
+  margin-top: 20px;
+  padding: .7em 2em 1em;
+  min-width: 255px;
+  max-width: 520px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  display: block; }
+
+div[id*="fortnum"] .widget-top {
+  position: relative;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  text-indent: 24px; }
+  div[id*="fortnum"] .widget-top:before {
+    content: '';
+    height: 20px;
+    width: 16px;
+    background-image: url("../images/fortnum-fav.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    background-size: 100%; }
+  div[id*="fortnum"] .widget-top:hover, div[id*="fortnum"] .widget-top.widget-in-question {
+    border: 1px solid #233588 !important;
+    box-shadow: 0 0 1px 3px #1b0594 !important;
+    -webkit-transition: 150ms;
+    transition: 150ms; }
+
+.header-bg-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .header-bg-upload #add-bg {
+    margin-right: 10px; }
+
+#case_location-case-location .hndle {
+  background: #fdb70e; }
+
+.contact-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.offices-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .offices-wrapper input {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    padding: 0; }
+    .offices-wrapper input.button2 {
+      border-radius: 3px;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase; }
+      .offices-wrapper input.button2.big {
+        background: #233588;
+        padding: 12px 35px; }
+      .offices-wrapper input.button2.bold {
+        font-weight: bold; }
+      .offices-wrapper input.button2.yellow {
+        background: #f8c804;
+        color: #233588; }
+      .offices-wrapper input.button2 .fa {
+        margin-right: 10px; }
+    .offices-wrapper input.contact_url {
+      font-size: 13px;
+      font-style: italic; }
+  .offices-wrapper .input_fortnum_contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .offices-wrapper .input_fortnum_contact i {
+      width: 53px; }
+
+#custom_url-custom-url {
+  background: #d2e4f1;
+  border: 1px solid #add3e8; }
+  #custom_url-custom-url .hndle {
+    border-bottom: 1px solid #add3e8; }

@@ -1,0 +1,224 @@
+.button,
+.btn {
+	background: $color-divider;
+	color: $color-text-body;
+	border: 1px solid white;
+	padding: $input-global-padding;
+	border-radius: 100px;
+	display: inline-block;
+	transition: 0.3s;
+
+	.fa.left {
+		margin-right: 10px;
+	}
+
+	.fa.right {
+		margin-left: 10px;
+	}
+
+	&.big {
+		padding: 14px 37px;
+	}
+		
+
+	&:active {
+		transition: 0.1s;
+		transform: scale(0.9);
+		outline: none;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $color-primary;
+	}
+
+	&:hover {
+		transition: 0.1s;
+	}
+
+	&.primary {
+		background: $color-primary;
+		border: 1px solid $color-primary;
+		color: white;
+
+		&:hover {
+			background: lighten($color-primary, 5%);
+		}
+
+		&.glass {
+			background: transparent;
+			color: #fff;
+			border: 1px solid #fff;
+
+			&.alt {
+				border: 2px solid $color-primary;
+				color: $color-primary;
+			}
+
+			&.alt2 {
+				border: 2px solid $color-primary;
+				color: $color-primary;
+				background: #fff;
+			}
+		}
+
+		&.glass.alt:hover {
+			border-color: lighten($color-primary, 5%);
+			background: $color-primary;
+			color: white;
+		}
+
+		&.glass.alt2:hover {
+			border-color: lighten($color-primary, 5%);
+			background: $color-primary;
+			color: white;
+		}
+
+		&.glass:hover {
+			border-color: lighten($color-primary, 5%);
+			background: white;
+			color: $color-primary;
+		}
+	}
+
+	&.gray {
+		background: #7b7b7b;
+		border: 1px solid #7b7b7b;
+		color: white;
+
+		&:hover {
+			background: lighten(#7b7b7b, 5%);
+		}
+
+		&.glass {
+			background: transparent;
+			color: #7b7b7b;
+		}
+
+		&.glass:hover {
+			border-color: $color-primary;
+			background: $color-primary;
+			color: #fff;
+		}
+	}
+
+	&.white {
+		background: #fff;
+		border: 1px solid #fff;
+		color: $color-primary;;
+
+		&:hover {
+			background: lighten(#fff, 5%);
+		}
+	}
+
+	&.accent {
+		background: $color-accent;
+		border: 1px solid $color-accent;
+		color: white;
+
+		&:hover {
+			background: lighten($color-accent, 5%);
+		}
+
+		&.glass {
+			background: transparent;
+			color: $color-accent;
+		}
+
+		&.glass:hover {
+			border-color: lighten($color-accent, 5%);
+			background: white;
+		}
+	}
+
+
+	&.dark {
+		background: #1c1c1c;
+		border: 1px solid #1c1c1c;
+		color: white;	
+
+		&:hover {
+			background: lighten(#1c1c1c, 5%);
+		}
+
+		&.glass {
+			background: transparent;
+
+			color: #1c1c1c;
+		}
+
+		&.glass:hover {
+			border-color: lighten(#1c1c1c, 5%);
+
+			color: $color-yellow;
+		}
+	}
+}
+
+.button-group {
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	&.glass {
+		&.white {
+			color: white;
+
+			.button {
+				color: white;
+			}
+
+			.button:hover {
+				color: #333;
+				background: white;
+			}
+
+			.button:active,
+			.button:focus {
+				transform: none;
+				border-color: white;
+			}
+		}
+
+		.button {
+			background: none;
+			color: #333;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
+	.button {
+		margin-right: -5px;
+		border-radius: 0;
+		border-right: none;
+
+		&:first-child {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+
+		&:last-child {
+			border-right: 1px solid white;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+
+	@media (max-width: $breakpoint-small) {
+		.button {
+			display: block;
+			margin-bottom: 2px;
+			margin: 5px 0;
+			border: 1px solid white;
+		}
+
+		.button:first-child,
+		.button:last-child {
+			border-radius: 3px;
+		}
+	}
+}

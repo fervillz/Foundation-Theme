@@ -1,0 +1,114 @@
+.top-header-wrapper {
+	background: #f5f4fd;
+	padding: 10px; 
+	color: #aeaeb2;
+	font-size: 14px;
+
+	@media ( max-width: 768px ) {
+		display: none;
+	}
+
+	.top-header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.social {
+		font-size: 18px;
+	}
+
+	a {
+		color: #aeaeb2;
+
+		&:hover {
+			color: $color-link-hover;
+		}
+	}
+
+	.contact {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		span:nth-child(2) {
+			margin: 0 0 0 13px;
+			padding: 0 13px;
+			border-left: 1px solid;
+		}
+
+		.fa {
+			margin-right: 10px;
+		}
+	}
+
+	.search {
+		background: #fff;
+		border: 1px solid;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		padding: 3px 13px;
+		flex-wrap: wrap;
+	}
+
+	.search-form {
+		input {
+			border: none;
+			background: transparent;
+			font-size: 14px;
+			transition: 100ms;
+
+			&:focus {
+				outline: none;
+				width: 200px;
+				transition: 150ms;
+			}
+		}
+
+		input[type="submit"] {
+			display: none;
+		}
+	}
+
+	.header-enquire {
+		text-transform: uppercase;
+	}
+}
+
+.site-header {
+	position: relative;
+	// height: $layout-header-height;
+}
+
+.site-branding {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 0;
+
+	.site-title {
+		max-width: 150px;
+
+		@media ( max-width: 768px ) {
+			margin: auto;
+		}
+	}
+
+	@media ( max-width: 768px ) {
+		display: block;
+		text-align: center;
+	}
+
+	@media ( max-width: 420px ) {
+		.button {
+			padding: 14px 0 !important;
+			width: 100%;
+			font-size: 13px;
+		}
+	}
+}
+
+
